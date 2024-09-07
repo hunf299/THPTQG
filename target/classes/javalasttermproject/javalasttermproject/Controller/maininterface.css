@@ -1,0 +1,52 @@
+#dashboard_buttons {
+    -fx-background-color:  linear-gradient(from 18.0523% 64.3705% to 100.0% 100.0%, #369cd7 0.0%, #cad7dd 100.0%);
+    -fx-background-radius: 15px;
+    -fx-font-weight: bold;
+}
+#dashboard_buttons:hover {
+    -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #d7d7d7 0.0%, #7edfff 99.6644%, #7edfff 100.0%);
+    -fx-cursor: hand;
+    -fx-text-fill: black;
+}
+#dashboard_buttons:pressed {
+    -fx-text-fill: white;
+    -fx-background-color: black;
+}
+#form_buttons {
+    -fx-background-color:  linear-gradient(from 18.0523% 64.3705% to 100.0% 100.0%, #369cd7 0.0%, #cad7dd 100.0%);
+}
+#form_buttons:hover {
+    -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #d7d7d7 0.0%, #7edfff 99.6644%, #7edfff 100.0%);
+    -fx-cursor: hand;
+    -fx-text-fill: black;
+}
+#form_buttons:pressed {
+    -fx-text-fill: white;
+    -fx-background-color: black;
+}
+#request_buttons {
+    -fx-background-color:  linear-gradient(from 18.0523% 64.3705% to 100.0% 100.0%, #369cd7 0.0%, #cad7dd 100.0%);
+}
+#request_buttons:hover {
+    -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #d7d7d7 0.0%, #7edfff 99.6644%, #7edfff 100.0%);
+    -fx-cursor: hand;
+    -fx-text-fill: black;
+}
+#request_buttons:pressed {
+    -fx-text-fill: white;
+    -fx-background-color: black;
+}
+#btn_menu:hover {
+    -fx-opacity: 0.7;
+    -fx-cursor: hand;
+}
+#form_filling {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}
+#form_showing {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}
+
+
+
+

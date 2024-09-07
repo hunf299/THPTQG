@@ -1,0 +1,945 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" stylesheets="@maininterface.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javalasttermproject.javalasttermproject.Controller.MainInterface">
+   <children>
+      <AnchorPane id="root" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane fx:id="verticalmenu" layoutX="21.0" layoutY="31.0" prefHeight="643.0" prefWidth="182.0" style="-fx-background-color: linear-gradient(from 18.0523% 64.3705% to 100.0% 100.0%, #369cd7 0.0%, #cad7dd 100.0%); -fx-background-radius: 20;">
+               <children>
+                  <AnchorPane layoutX="7.0" layoutY="61.0" prefHeight="581.0" prefWidth="164.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="1.0" AnchorPane.topAnchor="61.0">
+                     <children>
+                        <Button id="btn_menu" fx:id="form_button" alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="33.0" layoutY="83.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="131.0" style="-fx-background-color: transparent; -fx-font-size: 17px; -fx-font-weight: bold" text="Phiếu đăng ký" textFill="WHITE" />
+                        <MenuButton id="btn_menu" fx:id="option_button" alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="17.0" layoutY="138.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="142.0" style="-fx-background-color: transparent; -fx-font-size: 17px; -fx-font-weight: bold" text="Tra cứu" textAlignment="CENTER" textFill="WHITE">
+                           <items>
+                              <MenuItem fx:id="testinfo_item" mnemonicParsing="false" text="Tra cứu thông tin dự thi" />
+                              <MenuItem fx:id="score_item" mnemonicParsing="false" text="Tra cứu điểm thi" />
+                              <MenuItem fx:id="statusinfo_item" mnemonicParsing="false" text="Tra cứu trúng tuyển" />
+                           </items>
+                        </MenuButton>
+                        <ImageView fx:id="home_logo" fitHeight="20.0" fitWidth="19.0" layoutX="12.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Image/home.png" />
+                           </image></ImageView>
+                        <ImageView fx:id="list_icon1" fitHeight="18.0" fitWidth="21.0" layoutX="13.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Image/folder.png" />
+                           </image></ImageView>
+                        <ImageView fx:id="folder_icon" fitHeight="21.0" fitWidth="26.0" layoutX="11.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Image/list.png" />
+                           </image></ImageView>
+                        <ImageView fx:id="list_icon2" fitHeight="23.0" fitWidth="21.0" layoutX="12.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="201.0">
+                           <image>
+                              <Image url="@Image/list.png" />
+                           </image></ImageView>
+                        <Button id="btn_menu" fx:id="request_button" alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="21.0" layoutY="192.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="136.0" style="-fx-background-color: transparent; -fx-font-size: 17px; -fx-font-weight: bold" text="Tuyển sinh" textFill="WHITE" />
+                        <Button id="btn_menu" fx:id="home_button" alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="25.0" layoutY="27.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="117.0" style="-fx-background-color: transparent; -fx-font-size: 17px; -fx-font-weight: bold" text="Trang chủ" textFill="WHITE" />
+                        <ImageView fx:id="list_icon21" fitHeight="28.0" fitWidth="23.0" layoutX="10.0" layoutY="510.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Image/Person%20Icon%20White.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="name_label2" layoutX="40.0" layoutY="507.0" prefHeight="16.0" prefWidth="127.0" textFill="WHITE">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Label>
+                        <Label id="btn_menu" fx:id="changepass_item" layoutX="40.0" layoutY="524.0" text="Đổi mã đăng nhập" textFill="WHITE" underline="true">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="list_icon211" fitHeight="23.0" fitWidth="23.0" layoutX="11.0" layoutY="546.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Image/logout.png" />
+                           </image>
+                        </ImageView>
+                        <Button id="btn_menu" fx:id="logout_item" layoutX="29.0" layoutY="545.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="77.0" style="-fx-background-color: transparent;" text="Đăng xuất" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+                  <Line fx:id="form_line" endX="4.0" endY="93.0" fill="BLACK" layoutX="1.0" layoutY="84.0" startX="4.0" startY="74.0" stroke="WHITE" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="2.5" visible="false" AnchorPane.topAnchor="150.0" />
+                  <Line fx:id="option_line" endX="4.0" endY="93.0" fill="BLACK" layoutX="1.0" layoutY="141.0" startX="4.0" startY="74.0" stroke="WHITE" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="2.5" visible="false" AnchorPane.topAnchor="207.0" />
+                  <Line fx:id="request_line" endX="4.0" endY="93.0" fill="BLACK" layoutX="1.0" layoutY="197.0" startX="4.0" startY="74.0" stroke="WHITE" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="2.5" visible="false" AnchorPane.bottomAnchor="351.5" AnchorPane.leftAnchor="3.75" AnchorPane.rightAnchor="175.5" AnchorPane.topAnchor="260.75" />
+                  <Line fx:id="home_line" endX="-8.0" endY="93.0" fill="BLACK" layoutX="13.0" layoutY="21.0" startX="-8.0" startY="75.0" stroke="WHITE" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="2.5" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="dashboard_panel" layoutX="216.0" layoutY="33.0" prefHeight="644.0" prefWidth="679.0">
+               <children>
+                  <Label fx:id="hello_label" layoutX="9.0" layoutY="9.0" text="Xin chào" textFill="#949393" />
+                  <Label fx:id="name_label" layoutX="8.0" layoutY="25.0" prefHeight="26.0" prefWidth="251.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="id_label" layoutX="567.0" layoutY="9.0" text="Số CCCD/CMND" textFill="#949393" />
+                  <Label fx:id="idnum_label" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="485.0" layoutY="25.0" prefHeight="26.0" prefWidth="177.0" textAlignment="RIGHT">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane fx:id="request_dashboard" layoutX="387.0" layoutY="363.0" prefHeight="277.0" prefWidth="275.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 8, 0, 0, 0); -fx-background-radius: 15; -fx-background-color: #fffefe;">
+                     <children>
+                        <Label fx:id="request_dashboard_label" layoutX="19.0" layoutY="9.0" text="Nguyện vọng">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Button id="dashboard_buttons" fx:id="request_dashboard_viewbutton" layoutX="170.0" layoutY="5.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="90.0" text="Xem chi tiết" textFill="WHITE" />
+                        <Label fx:id="id_testinfo_label11" alignment="CENTER" layoutX="12.0" layoutY="40.0" prefHeight="17.0" prefWidth="20.0" text="1">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="uni1_dashboard_field" alignment="TOP_LEFT" layoutX="70.0" layoutY="40.0" prefHeight="36.0" prefWidth="185.0" wrapText="true" />
+                        <ImageView fitHeight="20.0" fitWidth="30.0" layoutX="39.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Image/university.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="20.0" fitWidth="23.0" layoutX="39.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Image/career.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="major1_dashboard_field" alignment="TOP_LEFT" layoutX="69.0" layoutY="77.0" prefHeight="36.0" prefWidth="188.0" wrapText="true" />
+                        <Label fx:id="id_testinfo_label111" alignment="CENTER" layoutX="11.0" layoutY="121.0" prefHeight="17.0" prefWidth="20.0" text="2">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="uni2_dashboard_field" alignment="TOP_LEFT" layoutX="69.0" layoutY="121.0" prefHeight="36.0" prefWidth="188.0" wrapText="true" />
+                        <ImageView fitHeight="20.0" fitWidth="30.0" layoutX="38.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Image/university.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="21.0" fitWidth="20.0" layoutX="38.0" layoutY="156.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Image/career.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="major2_dashboard_field" alignment="TOP_LEFT" layoutX="68.0" layoutY="158.0" prefHeight="36.0" prefWidth="188.0" wrapText="true" />
+                        <Label fx:id="id_testinfo_label112" alignment="CENTER" layoutX="11.0" layoutY="200.0" prefHeight="17.0" prefWidth="20.0" text="3">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="uni3_dashboard_field" alignment="TOP_LEFT" layoutX="69.0" layoutY="200.0" prefHeight="36.0" prefWidth="188.0" wrapText="true" />
+                        <ImageView fitHeight="20.0" fitWidth="30.0" layoutX="38.0" layoutY="198.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Image/university.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="21.0" fitWidth="33.0" layoutX="38.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Image/career.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="major3_dashboard_field" alignment="TOP_LEFT" layoutX="68.0" layoutY="237.0" prefHeight="36.0" prefWidth="188.0" wrapText="true" />
+                        <Line endX="110.681396484375" layoutX="141.0" layoutY="116.0" startX="-123.60015869140625" stroke="#e1e1e1" />
+                        <Line endX="110.681396484375" layoutX="140.0" layoutY="196.0" startX="-123.60015869140625" stroke="#e1e1e1" />
+                        <AnchorPane fx:id="norequesttoview" layoutX="6.0" layoutY="38.0" prefHeight="234.0" prefWidth="263.0" style="-fx-background-color: white;" visible="false">
+                           <children>
+                              <Label layoutX="22.0" layoutY="91.0" prefHeight="53.0" prefWidth="220.0" text="Chưa có nguyện vọng để hiển thị!" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font></Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="form_dashboard" layoutX="7.0" layoutY="63.0" prefHeight="137.0" prefWidth="657.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 8, 0, 0, 0); -fx-background-radius: 15; -fx-background-color: #fffefe;">
+                     <children>
+                        <Button id="dashboard_buttons" fx:id="form_dashboard_editbutton" layoutX="503.0" layoutY="8.0" mnemonicParsing="false" prefHeight="9.0" prefWidth="140.0" text="Sửa thông tin phiếu" textFill="WHITE" />
+                        <Label fx:id="thptqg_label_form1" layoutX="14.0" layoutY="44.0" text="- Có sử dụng kết quả thi THPTQG để xét tuyển ĐH, CĐ:" />
+                        <Label fx:id="outsidecandidate_label_form1" layoutX="14.0" layoutY="72.0" text="- Thí sinh tự do:" />
+                        <Label fx:id="appliedsubject_label_form1" layoutX="14.0" layoutY="101.0" text="- Đăng ký bài thi/môn thi:" />
+                        <TextField fx:id="free_textfield_dashboard" editable="false" layoutX="135.0" layoutY="67.0" style="-fx-background-color: transparent;" />
+                        <TextField fx:id="subject_field_dashboard" editable="false" layoutX="166.0" layoutY="96.0" style="-fx-background-color: transparent;" />
+                        <Label id="label" layoutX="15.0" layoutY="12.0" text="Phiếu đăng ký dự thi">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="thptqg_radiobutton_dashboard" layoutX="326.0" layoutY="44.0" />
+                        <Label fx:id="noformtoshow" alignment="CENTER" layoutX="14.0" layoutY="40.0" prefHeight="88.0" prefWidth="633.0" style="-fx-background-color: white;" text="Chưa có phiếu đăng ký dự thi để hiển thị!" visible="false">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="score_dashboard" layoutX="7.0" layoutY="362.0" prefHeight="278.0" prefWidth="360.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 8, 0, 0, 0); -fx-background-radius: 15; -fx-background-color: #fffefe;">
+                     <children>
+                        <Label fx:id="score_dashboard_label" layoutX="15.0" layoutY="10.0" text="Điểm thi">
+                           <font>
+                              <Font name="System Bold Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <Button id="dashboard_buttons" fx:id="score_dashboard_viewbutton" layoutX="255.0" layoutY="6.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="90.0" text="Xem chi tiết" textFill="WHITE" />
+                        <BarChart fx:id="score_barchart" layoutX="3.0" layoutY="33.0" prefHeight="245.0" prefWidth="355.0">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" fx:id="x_axis" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis fx:id="y_axis" side="LEFT" tickLabelGap="2.0" upperBound="90.0" />
+                          </yAxis>
+                        </BarChart>
+                        <AnchorPane fx:id="noscoretoview" layoutX="15.0" layoutY="39.0" prefHeight="234.0" prefWidth="331.0" style="-fx-background-color: white;" visible="false">
+                           <children>
+                              <Label layoutX="47.0" layoutY="104.0" text="Chưa có điểm thi để hiển thị!">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font></Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="testinfo_dashboard" layoutX="7.0" layoutY="219.0" prefHeight="125.0" prefWidth="657.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 8, 0, 0, 0); -fx-background-radius: 15; -fx-background-color: #fffefe;">
+                     <children>
+                        <Label layoutX="14.0" layoutY="10.0" text="Thông tin dự thi">
+                           <font>
+                              <Font name="System Bold Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <Button id="dashboard_buttons" fx:id="testinfo_dashboard_viewbutton" layoutX="553.0" layoutY="6.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="90.0" text="Xem chi tiết" textFill="WHITE" />
+                        <Label fx:id="testvenue_label1" layoutX="14.0" layoutY="66.0" text="- Địa điểm dự thi:" />
+                        <Label fx:id="testvenue_dashboard" layoutX="121.0" layoutY="66.0" prefHeight="17.0" prefWidth="303.0">
+                           <font>
+                              <Font name="System Bold Italic" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="checkindateandtime_label1" layoutX="14.0" layoutY="93.0" text="- Làm thủ tục dự thi vào lúc: " />
+                        <Label fx:id="checkintime_dashboard" layoutX="185.0" layoutY="93.0" prefHeight="17.0" prefWidth="141.0">
+                           <font>
+                              <Font name="System Bold Italic" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="room_label1" layoutX="453.0" layoutY="92.0" prefHeight="17.0" prefWidth="73.0" text="tại phòng thi:" />
+                        <Label fx:id="room_dashboard" layoutX="541.0" layoutY="93.0" prefHeight="17.0" prefWidth="95.0">
+                           <font>
+                              <Font name="System Bold Italic" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="id_testinfo_label1" layoutX="15.0" layoutY="39.0" text="- Số báo danh:" />
+                        <Label fx:id="idnum_dashboard_textfield" layoutX="122.0" layoutY="39.0" prefHeight="17.0" prefWidth="197.0">
+                           <font>
+                              <Font name="System Bold Italic" size="13.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane layoutX="334.0" layoutY="94.0" prefHeight="16.0" prefWidth="95.0" style="-fx-background-color: #e1e1e1; -fx-background-radius: 4.5;">
+                           <children>
+                              <Label fx:id="countdown_timer" alignment="CENTER" layoutX="2.0" layoutY="-1.0" prefHeight="17.0" prefWidth="95.0" textAlignment="CENTER" />
+                           </children>
+                        </AnchorPane>
+                        <Label fx:id="notestinfotoview" alignment="CENTER" layoutX="12.0" layoutY="35.0" prefHeight="88.0" prefWidth="633.0" style="-fx-background-color: white;" text="Chưa có giấy báo dự thi để hiển thị!" visible="false" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="35.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <StackPane fx:id="form_stackpanel" layoutX="214.0" layoutY="31.0" prefHeight="644.0" prefWidth="679.0" visible="false">
+               <children>
+                  <AnchorPane prefHeight="644.0" prefWidth="656.0">
+                     <children>
+                        <ButtonBar fx:id="form_buttonbar" layoutX="289.0" layoutY="3.0" prefHeight="53.0" prefWidth="362.0">
+                           <buttons>
+                              <Button id="form_buttons" fx:id="change_button" mnemonicParsing="false" prefHeight="40.0" text="Sửa phiếu" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold Italic" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button id="form_buttons" fx:id="delete_button" mnemonicParsing="false" prefHeight="40.0" text="Xoá phiếu" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold Italic" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button id="form_buttons" fx:id="printform_button" mnemonicParsing="false" prefHeight="40.0" text="In phiếu" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold Italic" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button id="form_buttons" fx:id="viewform_button" mnemonicParsing="false" prefHeight="40.0" text="Xem phiếu" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold Italic" size="13.0" />
+                                 </font>
+                              </Button>
+                           </buttons>
+                        </ButtonBar>
+                        <AnchorPane id="form_filling" fx:id="fillform_panel" layoutX="10.0" layoutY="63.0" prefHeight="581.0" prefWidth="660.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="63.0">
+                           <children>
+                              <ScrollPane pannable="true" prefHeight="581.0" prefWidth="660.0" style="-fx-background-radius: 5;" vmax="1.5">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="746.0" prefWidth="641.0">
+                                       <children>
+                                          <Label fx:id="name_label1" layoutX="36.0" layoutY="45.0" text="1. Họ, tên đệm, tên:" AnchorPane.leftAnchor="36.0" />
+                                          <Label fx:id="gender_label" layoutX="399.0" layoutY="45.0" text="Giới tính:" />
+                                          <RadioButton fx:id="male_radiobutton" layoutX="480.0" layoutY="44.0" mnemonicParsing="false" text="Nam">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="sex" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton fx:id="female_radiobutton" layoutX="559.0" layoutY="44.0" mnemonicParsing="false" text="Nữ" toggleGroup="$sex" />
+                                          <Label fx:id="birthdate_label" layoutX="37.0" layoutY="83.0" text="2. Ngày tháng năm sinh:" AnchorPane.leftAnchor="36.0" />
+                                          <Label fx:id="birthplace_label" layoutX="37.0" layoutY="125.0" text="3. Nơi sinh:" AnchorPane.leftAnchor="36.0" />
+                                          <TextField fx:id="birthplace_textfield" layoutX="127.0" layoutY="122.0" prefHeight="26.0" prefWidth="181.0" />
+                                          <Label fx:id="nation_label" layoutX="336.0" layoutY="124.0" text="Dân tộc:" />
+                                          <TextField fx:id="nation_textfield" layoutX="419.0" layoutY="122.0" prefHeight="26.0" prefWidth="91.0" />
+                                          <TextField fx:id="idnum_textfield" layoutX="178.0" layoutY="161.0" />
+                                          <Label fx:id="idnum_label1" layoutX="37.0" layoutY="166.0" text="4. Số CMND/CCCD:" AnchorPane.leftAnchor="36.0" />
+                                          <TextField fx:id="living_textfield" layoutX="177.0" layoutY="202.0" prefHeight="26.0" prefWidth="195.0" />
+                                          <Label fx:id="living_label" layoutX="36.0" layoutY="207.0" text="5. Nơi thường trú:" AnchorPane.leftAnchor="36.0" />
+                                          <TextField fx:id="highschool_textfield" layoutX="289.0" layoutY="242.0" />
+                                          <Label fx:id="highschool_label" layoutX="33.0" layoutY="247.0" text="6. Nơi học THPT hoặc tương đương:" AnchorPane.bottomAnchor="482.0" AnchorPane.leftAnchor="36.0" />
+                                          <TextField fx:id="mobile_textfield" layoutX="164.0" layoutY="282.0" prefHeight="26.0" prefWidth="104.0" AnchorPane.leftAnchor="161.0" />
+                                          <Label fx:id="phone_label" layoutX="36.0" layoutY="287.0" text="7. Số điện thoại:" AnchorPane.bottomAnchor="442.0" AnchorPane.leftAnchor="36.0" />
+                                          <TextField fx:id="email_textfield" layoutX="395.0" layoutY="280.0" prefHeight="26.0" prefWidth="207.0" />
+                                          <Label fx:id="email_label" layoutX="313.0" layoutY="283.0" text="Email:" />
+                                          <TextField fx:id="address_textfield" layoutX="160.0" layoutY="324.0" prefHeight="26.0" prefWidth="207.0" AnchorPane.leftAnchor="160.0" />
+                                          <Label fx:id="address_label" layoutX="35.0" layoutY="328.0" text="8. Địa chỉ liên hệ:" AnchorPane.leftAnchor="35.0" />
+                                          <Label fx:id="partA_label" layoutX="35.0" layoutY="14.0" text="A. Thông tin cá nhân" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="14.0">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="thptqg_label" layoutX="34.0" layoutY="396.0" text="1. Có sử dụng kết quả thi THPTQG để xét tuyển ĐH, CĐ:" AnchorPane.leftAnchor="36.0" />
+                                          <RadioButton fx:id="thptqg_radiobutton" layoutX="352.0" layoutY="396.0" mnemonicParsing="false" />
+                                          <Label fx:id="outsidecandidate_label" layoutX="34.0" layoutY="476.0" text="3. Thí sinh tự do:" AnchorPane.leftAnchor="36.0" />
+                                          <Label fx:id="appliedsubject_label" layoutX="34.0" layoutY="517.0" text="4. Đăng ký bài thi/môn thi:" AnchorPane.leftAnchor="36.0" />
+                                          <Label fx:id="subject_label" layoutX="49.0" layoutY="555.0" text="a) Đăng kí bài thi:" />
+                                          <Label fx:id="method_label" layoutX="36.0" layoutY="433.0" text="2. Hình thức giáo dục phổ thông:" AnchorPane.leftAnchor="36.0" />
+                                          <RadioButton fx:id="thpt_radiobutton" layoutX="229.0" layoutY="432.0" mnemonicParsing="false" text="THPT">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="edumethod" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton fx:id="gdtx_radiobutton" layoutX="312.0" layoutY="432.0" mnemonicParsing="false" text="GDTX" toggleGroup="$edumethod" />
+                                          <TextField fx:id="name_textfield" layoutX="168.0" layoutY="40.0" prefHeight="26.0" prefWidth="195.0" />
+                                          <RadioButton fx:id="graduated_radiobutton" layoutX="141.0" layoutY="476.0" mnemonicParsing="false" text="Đã tốt nghiệp THPT" />
+                                          <RadioButton fx:id="notgraduated_radiobutton" layoutX="300.0" layoutY="476.0" mnemonicParsing="false" text="Chưa tốt nghiệp THPT" />
+                                          <Label layoutX="48.0" layoutY="622.0" text="b) Đăng kí môn thi thành phần bài thi tổ hợp:" />
+                                          <Button fx:id="save_button" layoutX="309.0" layoutY="695.0" mnemonicParsing="false" style="-fx-background-color: linear-gradient(from 18.0523% 64.3705% to 100.0% 100.0%, #369cd7 0.0%, #cad7dd 100.0%);" text="Lưu" textFill="WHITE" />
+                                          <Label fx:id="partB_label" layoutX="35.0" layoutY="363.0" text="B. Thông tin đăng ký thi" AnchorPane.leftAnchor="35.0">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <RadioButton fx:id="math" layoutX="64.0" layoutY="589.0" mnemonicParsing="false" text="Toán" />
+                                          <RadioButton fx:id="literature" layoutX="144.0" layoutY="589.0" mnemonicParsing="false" text="Ngữ Văn" />
+                                          <RadioButton fx:id="naturalscience" layoutX="237.0" layoutY="589.0" mnemonicParsing="false" text="KHTN">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="subjectcombo" />
+                                             </toggleGroup></RadioButton>
+                                          <RadioButton fx:id="socialscience" layoutX="317.0" layoutY="589.0" mnemonicParsing="false" text="KHXH" toggleGroup="$subjectcombo" />
+                                          <RadioButton fx:id="foreignlanguage" layoutX="400.0" layoutY="589.0" mnemonicParsing="false" text="Ngoại ngữ" />
+                                          <RadioButton fx:id="physic" layoutX="63.0" layoutY="655.0" mnemonicParsing="false" text="Vật lí" />
+                                          <RadioButton fx:id="chemistry" layoutX="143.0" layoutY="655.0" mnemonicParsing="false" text="Hoá học" />
+                                          <RadioButton fx:id="bio" layoutX="236.0" layoutY="655.0" mnemonicParsing="false" text="Sinh học" />
+                                          <RadioButton fx:id="history" layoutX="337.0" layoutY="655.0" mnemonicParsing="false" text="Lịch sử" />
+                                          <RadioButton fx:id="geography" layoutX="433.0" layoutY="655.0" mnemonicParsing="false" text="Địa lí" />
+                                          <RadioButton fx:id="gdcd" layoutX="519.0" layoutY="655.0" mnemonicParsing="false" text="GDCD" />
+                                          <DatePicker fx:id="birthdate_textfield" layoutX="201.0" layoutY="79.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </AnchorPane>
+                        <Label fx:id="form_label" layoutX="27.0" layoutY="17.0" text="Phiếu đăng ký dự thi THPTQG">
+                           <font>
+                              <Font name="System Bold Italic" size="20.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane fx:id="showform_panel" layoutX="10.0" layoutY="56.0" prefHeight="557.0" prefWidth="621.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="63.0">
+                           <children>
+                              <AnchorPane fx:id="infoform_pane" minHeight="0.0" minWidth="0.0" prefHeight="581.0" prefWidth="660.0" style="-fx-border-color: #b5b5b5;">
+                                 <children>
+                                    <Label fx:id="name_label_form" layoutX="30.0" layoutY="42.0" text="1. Họ, tên đệm, tên:" AnchorPane.leftAnchor="30.0" />
+                                    <Label fx:id="gender_label_form" layoutX="386.0" layoutY="43.0" text="Giới tính:" />
+                                    <Label fx:id="birthdate_label_form" layoutX="30.0" layoutY="75.0" text="2. Ngày tháng năm sinh:" AnchorPane.leftAnchor="30.0" />
+                                    <TextField fx:id="birthdate_textfield_form" editable="false" layoutX="187.0" layoutY="72.0" style="-fx-background-color: transparent;" />
+                                    <Label fx:id="birthplace_label_form" layoutX="30.0" layoutY="110.0" text="3. Nơi sinh:" AnchorPane.leftAnchor="30.0" />
+                                    <TextField fx:id="birthplace_textfield1" editable="false" layoutX="132.0" layoutY="106.0" prefHeight="26.0" prefWidth="137.0" style="-fx-background-color: transparent;" />
+                                    <Label fx:id="nation_label1" layoutX="309.0" layoutY="110.0" text="Dân tộc:" />
+                                    <TextField fx:id="nation_textfield_form" editable="false" layoutX="390.0" layoutY="106.0" prefHeight="26.0" prefWidth="91.0" style="-fx-background-color: transparent;" />
+                                    <TextField fx:id="idnum_textfield_form" editable="false" layoutX="183.0" layoutY="143.0" style="-fx-background-color: transparent;" />
+                                    <Label fx:id="idnum_label_form" layoutX="26.0" layoutY="147.0" text="4. Số CMND/CCCD:" AnchorPane.leftAnchor="30.0" />
+                                    <TextField fx:id="living_textfield_form" editable="false" layoutX="151.0" layoutY="179.0" prefHeight="26.0" prefWidth="460.0" style="-fx-background-color: transparent;" />
+                                    <Label fx:id="living_label1" layoutX="30.0" layoutY="183.0" text="5. Nơi thường trú:" AnchorPane.leftAnchor="30.0" />
+                                    <TextField fx:id="highschool_textfield_form" editable="false" layoutX="250.0" layoutY="215.0" style="-fx-background-color: transparent;" />
+                                    <Label fx:id="highschool_label_form" layoutX="29.0" layoutY="219.0" text="6. Nơi học THPT hoặc tương đương:" AnchorPane.bottomAnchor="345.0" AnchorPane.leftAnchor="30.0" />
+                                    <TextField fx:id="mobile_textfield_form" editable="false" layoutX="151.0" layoutY="253.0" prefHeight="26.0" prefWidth="104.0" style="-fx-background-color: transparent;" AnchorPane.leftAnchor="151.0" />
+                                    <Label fx:id="phone_label_form" layoutX="30.0" layoutY="257.0" text="7. Số điện thoại:" AnchorPane.bottomAnchor="307.0" AnchorPane.leftAnchor="30.0" />
+                                    <TextField fx:id="email_textfield_form" editable="false" layoutX="390.0" layoutY="253.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-color: transparent;" />
+                                    <Label fx:id="email_label_form" layoutX="313.0" layoutY="257.0" text="Email:" />
+                                    <TextField fx:id="address_textfield_form" editable="false" layoutX="159.0" layoutY="291.0" prefHeight="26.0" prefWidth="460.0" style="-fx-background-color: transparent;" AnchorPane.leftAnchor="159.0" />
+                                    <Label fx:id="address_label_form" layoutX="30.0" layoutY="295.0" text="8. Địa chỉ liên hệ:" AnchorPane.leftAnchor="30.0" />
+                                    <Label fx:id="partA_label_form" layoutX="30.0" layoutY="16.0" text="A. Thông tin cá nhân" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="16.0">
+                                       <font>
+                                          <Font name="System Bold Italic" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="thptqg_label_form" layoutX="29.0" layoutY="359.0" text="1. Có sử dụng kết quả thi THPTQG để xét tuyển ĐH, CĐ:" AnchorPane.leftAnchor="30.0" />
+                                    <Label fx:id="outsidecandidate_label_form" layoutX="29.0" layoutY="440.0" text="3. Thí sinh tự do:" AnchorPane.leftAnchor="29.0" />
+                                    <Label fx:id="appliedsubject_label_form" layoutX="29.0" layoutY="479.0" text="4. Đăng ký bài thi/môn thi:" AnchorPane.leftAnchor="29.0" />
+                                    <Label fx:id="method_label_form" layoutX="29.0" layoutY="399.0" text="2. Hình thức giáo dục phổ thông:" AnchorPane.leftAnchor="29.0" />
+                                    <TextField fx:id="name_textfield_form" editable="false" layoutX="157.0" layoutY="38.0" prefHeight="26.0" prefWidth="207.0" style="-fx-background-color: transparent;" />
+                                    <Label fx:id="partB_label_form" layoutX="30.0" layoutY="327.0" text="B. Thông tin đăng ký thi" AnchorPane.leftAnchor="30.0">
+                                       <font>
+                                          <Font name="System Bold Italic" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="gender_textfield_form" editable="false" layoutX="460.0" layoutY="38.0" style="-fx-background-color: transparent;" />
+                                    <TextField fx:id="method_textfield_form" editable="false" layoutX="227.0" layoutY="395.0" style="-fx-background-color: transparent;" AnchorPane.leftAnchor="227.0" />
+                                    <TextField fx:id="free_textfield_form" editable="false" layoutX="135.0" layoutY="436.0" style="-fx-background-color: transparent;" />
+                                    <TextArea fx:id="subject_textarea" editable="false" layoutX="28.0" layoutY="507.0" prefHeight="53.0" prefWidth="611.0" style="-fx-background-color: transparent;">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></TextArea>
+                                    <Label fx:id="thptqg_radiobutton_form" layoutX="349.0" layoutY="359.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </StackPane>
+            <AnchorPane fx:id="testinfo_panel" layoutX="225.0" layoutY="31.0" prefHeight="644.0" prefWidth="657.0" visible="false">
+               <children>
+                  <Label fx:id="testinfo_label" layoutX="226.0" layoutY="8.0" text="Thông tin dự thi THPTQG">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <StackPane layoutX="12.0" layoutY="42.0" prefHeight="601.0" prefWidth="633.0">
+                     <children>
+                        <AnchorPane fx:id="grey_panel" prefHeight="601.0" prefWidth="633.0" style="-fx-background-color: #e1e1e1; -fx-background-radius: 20;">
+                           <children>
+                              <AnchorPane fx:id="testplace_panel" layoutX="37.0" layoutY="30.0" prefHeight="137.0" prefWidth="562.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);;">
+                                 <children>
+                                    <Label fx:id="testcheckin_label" layoutX="24.0" layoutY="14.0" text="Thông tin chung">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="testvenue_label" layoutX="26.0" layoutY="79.0" text="- Địa điểm dự thi:" />
+                                    <Label fx:id="testvenue" layoutX="133.0" layoutY="79.0" prefHeight="17.0" prefWidth="303.0">
+                                       <font>
+                                          <Font name="System Bold Italic" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="checkindateandtime_label" layoutX="26.0" layoutY="106.0" text="- Làm thủ tục dự thi vào lúc: " />
+                                    <Label fx:id="checkintime" layoutX="197.0" layoutY="106.0" prefHeight="17.0" prefWidth="141.0">
+                                       <font>
+                                          <Font name="System Bold Italic" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="room_label" layoutX="365.0" layoutY="105.0" prefHeight="17.0" prefWidth="73.0" text="tại phòng thi:" />
+                                    <Label fx:id="room" layoutX="453.0" layoutY="106.0" prefHeight="17.0" prefWidth="95.0">
+                                       <font>
+                                          <Font name="System Bold Italic" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Line fx:id="line" endX="406.9990234375" fill="BLACK" layoutX="128.0" layoutY="44.0" startX="-98.76837158203125" stroke="#f5f5f5" strokeWidth="3.0" />
+                                    <Label fx:id="id_testinfo_label" layoutX="27.0" layoutY="52.0" text="- Số báo danh:" />
+                                    <Label fx:id="idnum_testinfo_textfield" layoutX="134.0" layoutY="52.0" prefHeight="17.0" prefWidth="197.0">
+                                       <font>
+                                          <Font name="System Bold Italic" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="detailedtime_label" layoutX="35.0" layoutY="192.0" prefHeight="202.0" prefWidth="564.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);;">
+                                 <children>
+                                    <Label fx:id="datetime_panel" layoutX="21.0" layoutY="11.0" text="Thông tin về thời gian thi">
+                                       <font>
+                                          <Font name="System Bold Italic" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TableView fx:id="subjectandtime_table" layoutY="46.0" prefHeight="157.0" prefWidth="564.0">
+                                       <columns>
+                                          <TableColumn fx:id="subject_column" editable="false" prefWidth="94.0" style="-fx-alignment: CENTER;" text="Bài thi" />
+                                          <TableColumn fx:id="literature_column" editable="false" prefWidth="55.5" style="-fx-alignment: CENTER;" text="Ngữ Văn" />
+                                          <TableColumn fx:id="math_column" editable="false" minWidth="1.532989501953125" prefWidth="48.5" style="-fx-alignment: CENTER;" text="Toán" />
+                                          <TableColumn fx:id="science_column" editable="false" prefWidth="137.5" text="KHTN">
+                                             <columns>
+                                                <TableColumn fx:id="physic_column" editable="false" prefWidth="52.57025146484375" style="-fx-alignment: CENTER;" text="Vật lý" />
+                                                <TableColumn fx:id="chemistry_column" editable="false" prefWidth="61.8162841796875" style="-fx-alignment: CENTER;" text="Hoá học" />
+                                                <TableColumn fx:id="bio_column" editable="false" prefWidth="56.96466064453125" style="-fx-alignment: CENTER;" text="Sinh học" />
+                                             </columns>
+                                          </TableColumn>
+                                          <TableColumn fx:id="foreignlanguage_column" editable="false" minWidth="8.71783447265625" prefWidth="67.3944091796875" style="-fx-alignment: CENTER;" text="Ngoại ngữ" />
+                                          <TableColumn fx:id="socialscience_column" editable="false" prefWidth="150.9139404296875" text="KHXH">
+                                             <columns>
+                                                <TableColumn fx:id="history_column" editable="false" prefWidth="53.5506591796875" style="-fx-alignment: CENTER;" text="Lịch sử" />
+                                                <TableColumn fx:id="geo_column" editable="false" prefWidth="48.45306396484375" style="-fx-alignment: CENTER;" text="Địa lý" />
+                                                <TableColumn fx:id="gdcd_column" editable="false" minWidth="7.58978271484375" prefWidth="49.5" style="-fx-alignment: CENTER;" text="GDCD" />
+                                             </columns>
+                                          </TableColumn>
+                                       </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="warning_panel" layoutX="33.0" layoutY="415.0" prefHeight="157.0" prefWidth="564.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);;">
+                                 <children>
+                                    <Label fx:id="warning_label" layoutX="21.0" layoutY="14.0" text="Lưu ý">
+                                       <font>
+                                          <Font name="System Bold Italic" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextArea fx:id="warning_textarea" editable="false" layoutX="23.0" layoutY="41.0" prefHeight="104.0" prefWidth="523.0" style="-fx-background-color: transparent;" text="(*) Thi sinh không đăng ký dự thi bải thi/môn thi nào sẽ được đánh dấu (X) tại cột tương ứng bải thi/môn thi đó; nếu thí sinh không đăng ký cả bài thi tổ hợp nào thì tất cả các môn thi thảnh phần của bài thi tổ hợp đó sẽ được đánh dấu (X). Riêng đối với thi sinh GDTX học lớp 12 trong năm tổ chức thi nếu chọn bài thi KHXH thì sẽ đánh dấu X môn GDCD nếu thí sinh không chọn thi thêm môn GDCĐ để xét tuyền sinh ĐH, CĐ." wrapText="true" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="notestinfotoview_panel" prefHeight="601.0" prefWidth="633.0" style="-fx-background-color: #e1e1e1; -fx-background-radius: 20;" visible="false">
+                           <children>
+                              <Label layoutX="169.0" layoutY="288.0" text="Chưa có thông tin dự thi để hiển thị!">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </StackPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="score_anchorpane" layoutX="225.0" layoutY="42.0" prefHeight="633.0" prefWidth="657.0" visible="false">
+               <children>
+                  <Label fx:id="testinfo_label1" layoutX="249.0" layoutY="1.0" text="Điểm thi THPTQG">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <StackPane layoutX="12.0" layoutY="32.0" prefHeight="601.0" prefWidth="633.0">
+                     <children>
+                        <AnchorPane fx:id="score_panel" prefHeight="601.0" prefWidth="633.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+                           <children>
+                              <AnchorPane fx:id="testplace_panel" layoutX="35.0" layoutY="46.0" prefHeight="137.0" prefWidth="157.0" style="-fx-background-color: #e4e4e4; -fx-background-radius: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);;">
+                                 <children>
+                                    <Label fx:id="testcheckin_label11" alignment="CENTER" layoutX="21.0" layoutY="14.0" prefHeight="26.0" prefWidth="111.0" text="Toán học">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Line fx:id="line11" endX="15.5" fill="BLACK" layoutX="121.0" layoutY="44.0" startX="-98.76837158203125" stroke="#f5f5f5" strokeWidth="3.0" />
+                                    <Label fx:id="math_score1" alignment="CENTER" layoutX="21.0" layoutY="54.0" prefHeight="69.0" prefWidth="111.0">
+                                       <font>
+                                          <Font name="System Bold" size="55.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="warning_panel11" layoutX="35.0" layoutY="408.0" prefHeight="163.0" prefWidth="562.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20;">
+                                 <children>
+                                    <Label fx:id="warning_label11" layoutX="21.0" layoutY="14.0" text="Điểm theo khối thi phổ biến">
+                                       <font>
+                                          <Font name="Helvetica Bold Oblique" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Line fx:id="line131" endX="421.5" fill="BLACK" layoutX="121.0" layoutY="40.0" startX="-98.76837158203125" stroke="#f5f5f5" strokeWidth="3.0" />
+                                    <Label layoutX="21.0" layoutY="91.0" text="1. A00:">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="21.0" layoutY="121.0" text="2. A01:">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="155.0" layoutY="92.0" text="1. B00:">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="155.0" layoutY="122.0" text="2. B08:">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="297.0" layoutY="92.0" text="1. C00:">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="297.0" layoutY="122.0" text="2. C19:">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="431.0" layoutY="92.0" text="1. D00:">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="431.0" layoutY="122.0" text="2. D07:">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="22.0" layoutY="59.0" text="Khối A">
+                                       <font>
+                                          <Font name="System Bold Italic" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="155.0" layoutY="59.0" text="Khối B">
+                                       <font>
+                                          <Font name="System Bold Italic" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="298.0" layoutY="59.0" text="Khối C">
+                                       <font>
+                                          <Font name="System Bold Italic" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="431.0" layoutY="59.0" text="Khối D">
+                                       <font>
+                                          <Font name="System Bold Italic" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="a001" layoutX="85.0" layoutY="91.0">
+                                       <font>
+                                          <Font name="System Bold Italic" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="a011" layoutX="85.0" layoutY="121.0">
+                                       <font>
+                                          <Font name="System Bold Italic" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="b001" layoutX="222.0" layoutY="93.0">
+                                       <font>
+                                          <Font name="System Bold Italic" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="b081" layoutX="222.0" layoutY="123.0">
+                                       <font>
+                                          <Font name="System Bold Italic" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="c001" layoutX="366.0" layoutY="93.0">
+                                       <font>
+                                          <Font name="System Bold Italic" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="c191" layoutX="366.0" layoutY="123.0">
+                                       <font>
+                                          <Font name="System Bold Italic" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="d001" layoutX="503.0" layoutY="91.0" prefHeight="22.0" prefWidth="43.0">
+                                       <font>
+                                          <Font name="System Bold Italic" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="d071" layoutX="503.0" layoutY="121.0" prefHeight="22.0" prefWidth="43.0">
+                                       <font>
+                                          <Font name="System Bold Italic" size="17.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="testplace_panel111" layoutX="237.0" layoutY="46.0" prefHeight="137.0" prefWidth="157.0" style="-fx-background-color: #e4e4e4; -fx-background-radius: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);;">
+                                 <children>
+                                    <Label fx:id="testcheckin_label111" alignment="CENTER" layoutX="18.0" layoutY="14.0" prefHeight="26.0" prefWidth="124.0" text="Ngữ Văn">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Line fx:id="line111" endX="15.5" fill="BLACK" layoutX="121.0" layoutY="44.0" startX="-98.76837158203125" stroke="#f5f5f5" strokeWidth="3.0" />
+                                    <Label fx:id="literature_score1" alignment="CENTER" layoutX="22.0" layoutY="54.0" prefHeight="69.0" prefWidth="111.0">
+                                       <font>
+                                          <Font name="System Bold" size="55.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="testplace_panel1111" layoutX="440.0" layoutY="46.0" prefHeight="137.0" prefWidth="157.0" style="-fx-background-color: #e4e4e4; -fx-background-radius: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);;">
+                                 <children>
+                                    <Label fx:id="testcheckin_label1111" alignment="CENTER" layoutX="18.0" layoutY="14.0" prefHeight="26.0" prefWidth="117.0" text="Ngoại ngữ">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Line fx:id="line1111" endX="15.5" fill="BLACK" layoutX="121.0" layoutY="44.0" startX="-98.76837158203125" stroke="#f5f5f5" strokeWidth="3.0" />
+                                    <Label fx:id="foreignlanguage_score1" alignment="CENTER" layoutX="21.0" layoutY="54.0" prefHeight="69.0" prefWidth="111.0">
+                                       <font>
+                                          <Font name="System Bold" size="55.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <StackPane layoutX="34.0" layoutY="235.0" prefHeight="137.0" prefWidth="160.0">
+                                 <children>
+                                    <AnchorPane fx:id="physic_scorepane1" prefHeight="137.0" prefWidth="157.0" style="-fx-background-color: #e4e4e4; -fx-background-radius: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);;" visible="false">
+                                       <children>
+                                          <Label fx:id="testcheckin_label121" alignment="CENTER" layoutX="17.0" layoutY="14.0" prefHeight="26.0" prefWidth="117.0" text="Vật lý">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Line fx:id="line121" endX="15.5" fill="BLACK" layoutX="121.0" layoutY="44.0" startX="-98.76837158203125" stroke="#f5f5f5" strokeWidth="3.0" />
+                                          <Label fx:id="physic_score1" alignment="CENTER" layoutX="22.0" layoutY="55.0" prefHeight="69.0" prefWidth="111.0">
+                                             <font>
+                                                <Font name="System Bold" size="55.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="history_scorepane1" layoutX="10.0" layoutY="10.0" prefHeight="137.0" prefWidth="157.0" style="-fx-background-color: #e4e4e4; -fx-background-radius: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);;" visible="false">
+                                       <children>
+                                          <Label fx:id="testcheckin_label1231" alignment="CENTER" layoutX="17.0" layoutY="14.0" prefHeight="26.0" prefWidth="124.0" text="Lich sử">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Line fx:id="line1231" endX="15.5" fill="BLACK" layoutX="121.0" layoutY="44.0" startX="-98.76837158203125" stroke="#f5f5f5" strokeWidth="3.0" />
+                                          <Label fx:id="history_score1" alignment="CENTER" layoutX="23.0" layoutY="55.0" prefHeight="69.0" prefWidth="111.0">
+                                             <font>
+                                                <Font name="System Bold" size="55.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </StackPane>
+                              <StackPane layoutX="439.0" layoutY="235.0" prefHeight="137.0" prefWidth="160.0">
+                                 <children>
+                                    <AnchorPane fx:id="bio_scorepane1" prefHeight="137.0" prefWidth="157.0" style="-fx-background-color: #e4e4e4; -fx-background-radius: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);;" visible="false">
+                                       <children>
+                                          <Label fx:id="testcheckin_label1211" alignment="CENTER" layoutX="18.0" layoutY="14.0" prefHeight="26.0" prefWidth="124.0" text="Sinh học">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Line fx:id="line1211" endX="15.5" fill="BLACK" layoutX="121.0" layoutY="44.0" startX="-98.76837158203125" stroke="#f5f5f5" strokeWidth="3.0" />
+                                          <Label fx:id="bio_score1" alignment="CENTER" layoutX="23.0" layoutY="54.0" prefHeight="69.0" prefWidth="111.0">
+                                             <font>
+                                                <Font name="System Bold" size="55.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="gdcd_scorepane1" layoutX="10.0" layoutY="10.0" prefHeight="137.0" prefWidth="157.0" style="-fx-background-color: #e4e4e4; -fx-background-radius: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);;" visible="false">
+                                       <children>
+                                          <Label fx:id="testcheckin_label12111" alignment="CENTER" layoutX="18.0" layoutY="14.0" prefHeight="26.0" prefWidth="124.0" text="GDCD">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Line fx:id="line12111" endX="15.5" fill="BLACK" layoutX="121.0" layoutY="44.0" startX="-98.76837158203125" stroke="#f5f5f5" strokeWidth="3.0" />
+                                          <Label fx:id="gdcd_score1" alignment="CENTER" layoutX="24.0" layoutY="54.0" prefHeight="69.0" prefWidth="111.0">
+                                             <font>
+                                                <Font name="System Bold" size="55.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </StackPane>
+                              <StackPane layoutX="236.0" layoutY="235.0" prefHeight="137.0" prefWidth="160.0">
+                                 <children>
+                                    <AnchorPane fx:id="chemistry_scorepane1" prefHeight="137.0" prefWidth="157.0" style="-fx-background-color: #e4e4e4; -fx-background-radius: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);;" visible="false">
+                                       <children>
+                                          <Label fx:id="testcheckin_label1221" alignment="CENTER" layoutX="18.0" layoutY="14.0" prefHeight="26.0" prefWidth="124.0" text="Hoá học">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Line fx:id="line1221" endX="15.5" fill="BLACK" layoutX="121.0" layoutY="44.0" startX="-98.76837158203125" stroke="#f5f5f5" strokeWidth="3.0" />
+                                          <Label fx:id="chemistry_score1" alignment="CENTER" layoutX="23.0" layoutY="54.0" prefHeight="69.0" prefWidth="111.0">
+                                             <font>
+                                                <Font name="System Bold" size="55.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="geography_scorepane1" layoutX="10.0" layoutY="10.0" prefHeight="137.0" prefWidth="157.0" style="-fx-background-color: #e4e4e4; -fx-background-radius: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);;" visible="false">
+                                       <children>
+                                          <Label fx:id="testcheckin_label12211" alignment="CENTER" layoutX="18.0" layoutY="14.0" prefHeight="26.0" prefWidth="124.0" text="Địa lý">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Line fx:id="line12211" endX="15.5" fill="BLACK" layoutX="121.0" layoutY="44.0" startX="-98.76837158203125" stroke="#f5f5f5" strokeWidth="3.0" />
+                                          <Label fx:id="geography_score1" alignment="CENTER" layoutX="24.0" layoutY="54.0" prefHeight="69.0" prefWidth="111.0">
+                                             <font>
+                                                <Font name="System Bold" size="55.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="noscoretoview_panel" prefHeight="601.0" prefWidth="633.0" style="-fx-background-color: white; -fx-background-radius: 20;" visible="false">
+                           <children>
+                              <Label layoutX="198.0" layoutY="288.0" text="Chưa có điểm thi để hiển thị!">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </StackPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="request_panel" layoutX="225.0" layoutY="31.0" prefHeight="643.0" prefWidth="657.0" visible="false">
+               <children>
+                  <Label fx:id="request_label" layoutX="147.0" layoutY="8.0" text="Thông tin đăng ký nguyện vọng của thí sinh">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <ButtonBar fx:id="request_buttonbar" layoutX="27.0" layoutY="41.0" prefHeight="53.0" prefWidth="582.0">
+                     <buttons>
+                        <Button id="request_buttons" fx:id="addrequest_button" minWidth="49.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="169.0" text="Lưu nguyện vọng" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button id="request_buttons" fx:id="changeorder_button" mnemonicParsing="false" prefHeight="40.0" text="Sửa nguyện vọng" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button id="request_buttons" fx:id="deleterequest_button" mnemonicParsing="false" prefHeight="40.0" prefWidth="203.0" text="Xoá nguyện vọng" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="13.0" />
+                           </font>
+                        </Button>
+                     </buttons>
+                  </ButtonBar>
+                  <AnchorPane fx:id="firstrequest_panel1" layoutX="3.0" layoutY="108.0" prefHeight="157.0" prefWidth="650.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20;">
+                     <children>
+                        <Label fx:id="order_label_fill" layoutX="48.0" layoutY="25.0" text="Thứ tự nguyện vọng">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <Line endX="-98.76837158203125" endY="99.0" fill="BLACK" layoutX="313.0" layoutY="35.0" startX="-98.76837158203125" startY="-12.0" stroke="#eeeeee" strokeWidth="3.0" />
+                        <Label fx:id="uni_label1" layoutX="236.0" layoutY="20.0" text="Trường:" />
+                        <Label fx:id="major_label1" layoutX="236.0" layoutY="52.0" text="Ngành:" />
+                        <Label fx:id="trainingunit_label1" layoutX="236.0" layoutY="86.0" prefHeight="17.0" prefWidth="73.0" text="Hệ đào tạo:" />
+                        <Label fx:id="trainingprogram_label1" layoutX="236.0" layoutY="119.0" prefHeight="17.0" prefWidth="124.0" text="Chương trình đào tạo:" />
+                        <ComboBox fx:id="trainingprogram_combobox_fill" layoutX="366.0" layoutY="114.0" prefHeight="28.0" prefWidth="251.0" style="-fx-background-color: transparent; -fx-border-color: #d3d3d3; -fx-border-radius: 5;" />
+                        <TextField fx:id="requestorder_textfield" alignment="CENTER" layoutX="39.0" layoutY="49.0" prefHeight="88.0" prefWidth="160.0" style="-fx-background-color: transparent;">
+                           <font>
+                              <Font name="System Bold Italic" size="46.0" />
+                           </font>
+                        </TextField>
+                        <ComboBox fx:id="uni_combobox" layoutX="317.0" layoutY="15.0" prefHeight="28.0" prefWidth="303.0" style="-fx-background-color: transparent; -fx-border-color: #d3d3d3; -fx-border-radius: 5;" />
+                        <ComboBox fx:id="majors_combobox" layoutX="317.0" layoutY="48.0" prefHeight="28.0" prefWidth="303.0" style="-fx-background-color: transparent; -fx-border-color: #d3d3d3; -fx-border-radius: 5;" />
+                        <Label fx:id="trainingunit_fill" layoutX="317.0" layoutY="86.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <TableView fx:id="request_tableview" layoutX="3.0" layoutY="281.0" prefHeight="362.0" prefWidth="650.0">
+                    <columns>
+                      <TableColumn fx:id="order_column" editable="false" prefWidth="43.0" text="Thứ tự" />
+                      <TableColumn fx:id="uni_column" editable="false" minWidth="9.0" prefWidth="230.0" text="Trường" />
+                        <TableColumn fx:id="major_column" editable="false" minWidth="9.0" prefWidth="188.0" text="Ngành" />
+                        <TableColumn fx:id="unit_column" editable="false" minWidth="9.0" prefWidth="65.0" text="Hệ đào tạo" />
+                        <TableColumn fx:id="program_column" editable="false" minWidth="9.0" prefWidth="119.0" text="Chương trình đào tạo" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <AnchorPane fx:id="prohibitedrequestpanel" layoutX="2.0" layoutY="39.0" prefHeight="607.0" prefWidth="657.0" style="-fx-background-color: white; -fx-background-radius: 10;" visible="false">
+                     <children>
+                        <Label layoutX="164.0" layoutY="291.0" text="Chưa tới thời hạn đăng ký nguyện vọng!">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="statusinfo_panel" layoutX="221.0" layoutY="31.0" prefHeight="607.0" prefWidth="438.0" visible="false">
+               <children>
+                  <Label layoutX="193.0" layoutY="13.0" text="Tra cứu nguyện vọng trúng tuyển">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="statusinfo_tableview" layoutX="5.0" layoutY="280.0" prefHeight="362.0" prefWidth="650.0">
+                     <columns>
+                        <TableColumn fx:id="statusinfo_uni_column" editable="false" minWidth="9.0" prefWidth="183.5" text="Trường" />
+                        <TableColumn fx:id="statusinfo_major_column" editable="false" minWidth="9.0" prefWidth="173.0" text="Ngành" />
+                        <TableColumn fx:id="statusinfo_unit_column" editable="false" minWidth="9.0" prefWidth="66.0" text="Hệ đào tạo" />
+                        <TableColumn fx:id="statusinfo_program_column" editable="false" minWidth="9.0" prefWidth="119.5" text="Chương trình đào tạo" />
+                        <TableColumn fx:id="statusinfo_acceptedornot_column" prefWidth="75.5" text="Tình trạng" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <AnchorPane fx:id="prohibitedstatusinfopanel" layoutX="2.0" layoutY="54.0" prefHeight="592.0" prefWidth="657.0" style="-fx-background-color: white; -fx-background-radius: 10;" visible="false">
+                     <children>
+                        <Label layoutX="164.0" layoutY="291.0" text="Chưa tới thời hạn tra cứu trúng tuyển!">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="warning_panel1" layoutX="6.0" layoutY="56.0" prefHeight="203.0" prefWidth="650.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);">
+                     <children>
+                        <Label fx:id="warning_label1" layoutX="21.0" layoutY="18.0" text="Lưu ý">
+                           <font>
+                              <Font name="System Bold Italic" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="warning_textarea1" editable="false" layoutX="23.0" layoutY="45.0" prefHeight="143.0" prefWidth="611.0" style="-fx-background-color: transparent;" text="(*) Thí sinh đăng ký xét tuyển vào tất cả các cơ sở đào tạo theo ngành, chương trình và được xếp thứ tự từ 1 đến hết. Trong đó, nguyện vọng 1 là nguyện vọng cao nhất. Đồng thời, thí sinh phải cung cấp các dữ liệu theo tiêu chí, điều kiện, quy trình đăng ký của từng trường, tương ứng với ngành, chương trình mà thí sinh đã đăng ký xét tuyển để các trường đại học sử dụng xét tuyển. Tất cả các nguyện vọng xét tuyển của thí sinh vào cơ sở đào tạo được xử lý trên hệ thống và mỗi thí sinh chỉ trúng tuyển 1 nguyện vọng cao nhất trong số các nguyện vọng đã đăng ký khi bảo đảm đủ điều kiện trúng tuyển." wrapText="true">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextArea>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
